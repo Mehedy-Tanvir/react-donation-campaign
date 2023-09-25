@@ -1,10 +1,15 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../Components/Header/Navbar/Navbar";
 
 const MainLayout = () => {
+  const loc = useLocation();
+  console.log(loc);
   return (
     <div>
-      <Navbar></Navbar>
+      <div className={loc.pathname === "/" ? "hidden" : ""}>
+        <Navbar></Navbar>
+      </div>
+
       <Outlet></Outlet>
     </div>
   );

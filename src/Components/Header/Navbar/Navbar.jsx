@@ -52,7 +52,7 @@ const Navbar = () => {
   console.log(loc);
 
   return (
-    <div className="max-w-[310px] md:max-w-[750px] lg:max-w-[900px] xl:max-w-[1320px] mx-auto mt-[50px]">
+    <div className="max-w-[310px] md:max-w-[750px] lg:max-w-[900px] xl:max-w-[1320px] mx-auto mt-[50px] z-50 flex justify-center items-center">
       <div className="container flex items-center justify-between">
         <div className="dropdown lg:hidden">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
