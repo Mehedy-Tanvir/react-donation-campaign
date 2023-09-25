@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import { addToLs } from "../../Utility/localStorageHandler";
 
 const Details = () => {
   const params = useParams();
@@ -7,6 +8,7 @@ const Details = () => {
   let detailItem = items.find((item) => item.id == params.id);
   const handleDonate = () => {
     Swal.fire("Good job!", "Your donation was successful!", "success");
+    addToLs(detailItem.id);
   };
 
   return (
