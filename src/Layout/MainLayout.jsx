@@ -3,9 +3,8 @@ import Navbar from "../Components/Header/Navbar/Navbar";
 
 const MainLayout = () => {
   const loc = useLocation();
-  console.log(loc);
   return (
-    <div>
+    <div className="font-inter">
       <div className={loc.pathname === "/" ? "hidden" : ""}>
         <Navbar></Navbar>
       </div>

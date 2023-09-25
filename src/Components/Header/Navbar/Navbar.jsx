@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const links = (
@@ -48,8 +48,6 @@ const Navbar = () => {
       </li>
     </>
   );
-  const loc = useLocation();
-  console.log(loc);
 
   return (
     <div className="max-w-[310px] md:max-w-[750px] lg:max-w-[900px] xl:max-w-[1320px] mx-auto mt-[50px] z-50 flex justify-center items-center">
