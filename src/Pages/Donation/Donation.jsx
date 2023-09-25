@@ -30,7 +30,7 @@ const Donation = () => {
       {donatedItems.length > 4 && !seeAll ? (
         <div className="flex justify-center items-center mt-[54px]">
           <button
-            className="btn normal-case bg-[#009444] text-white rounded-lg text-[16px] font-semibold"
+            className="btn normal-case bg-[#009444] hover:bg-green-500 text-white rounded-lg text-[16px] font-semibold"
             onClick={handleSeeAll}
           >
             See All
