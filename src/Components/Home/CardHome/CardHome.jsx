@@ -43,6 +43,6 @@ const CardHome = ({ item }) => {
   );
 };
 CardHome.propTypes = {
-  item: PropTypes.object.isRequired, // Example:
+  item: PropTypes.object.isRequired,
 };
 export default CardHome;
