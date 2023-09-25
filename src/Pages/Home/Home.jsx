@@ -4,7 +4,7 @@ import CardContainerHome from "../../Components/Home/CardContainerHome/CardConta
 
 const Home = () => {
   return (
-    <div className="mb-[120px]">
+    <div className="mb-[40px] md:mb-[120px]">
       <div className="relative">
         <div className="absolute w-full">
           <Navbar></Navbar>

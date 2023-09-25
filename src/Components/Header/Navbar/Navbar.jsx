@@ -76,7 +76,7 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <img className="w-[200px]" src="./Logo.png" alt="logo" />
+        <img className="w-[200px]" src="/Logo.png" alt="logo" />
         <div className="hidden lg:block">
           <ul className="flex text-[#0B0B0B] text-[18px] font-normal gap-[49px] items-center">
             {links}
