@@ -12,7 +12,7 @@ const CardDonated = ({ item }) => {
       </figure>
       <div
         style={{ backgroundColor: item.card_bg_color }}
-        className="rounded-b-lg md:rounded-t-lg md:rounded-l-none card-body"
+        className="rounded-b-lg md:rounded-l-none md:rounded-e-lg card-body"
       >
         <div
           style={{
