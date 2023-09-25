@@ -1,20 +1,13 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Details = () => {
   const params = useParams();
   const items = useLoaderData();
   let detailItem = items.find((item) => item.id == params.id);
-
-  //   const {
-  //     id,
-  //     image_card,
-  //     category,
-  //     title,
-  //     text_color,
-  //     category_bg_color,
-  //     card_bg_color,
-  //   } = campaign;
-  console.log(detailItem);
+  const handleDonate = () => {
+    Swal.fire("Good job!", "Your donation was successful!", "success");
+  };
 
   return (
     <div className="max-w-[310px] md:max-w-[750px] lg:max-w-[900px] xl:max-w-[1320px] mx-auto mt-[80px] mb-[40px] md:mb-[122px]">
@@ -28,6 +21,7 @@ const Details = () => {
           <button
             style={{ backgroundColor: detailItem.text_color }}
             className="z-20 btn rounded text-white py-[16px] border-none normal-case text-[20px] font-semibold px-[26px] ml-[37px]"
+            onClick={handleDonate}
           >
             Donate {detailItem.price}$
           </button>
