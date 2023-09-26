@@ -16,6 +16,15 @@ const Donation = () => {
 
   return (
     <div className="max-w-[310px] md:max-w-[750px] lg:max-w-[900px] xl:max-w-[1320px] mx-auto mt-[40px] md:mt-[80px] mb-[40px] md:mb-[120px]">
+      {donatedItems.length === 0 ? (
+        <div className="flex flex-col items-center justify-center w-full h-[600px] gap-6">
+          <h2 className="text-2xl font-bold text-center text-gray-600">
+            You have not made any donations yet!
+          </h2>
+        </div>
+      ) : (
+        ``
+      )}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-[24px]">
         {seeAll
           ? donatedItems.map((item, idx) => (

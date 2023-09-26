@@ -8,7 +8,6 @@ const CardContainerHome = ({ inputValue }) => {
     const filterData = data.filter(
       (item) => item.category.toLowerCase() === inputValue.toLowerCase()
     );
-    console.log(filterData);
     if (filterData.length > 0) {
       data = filterData;
     }

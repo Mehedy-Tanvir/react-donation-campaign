@@ -5,7 +5,6 @@ import { useLoaderData } from "react-router-dom";
 const Statistics = () => {
   const items = useLoaderData() || [];
   const donatedItems = getFromLs() || [];
-  console.log(donatedItems.length, items.length);
   const data = [
     ["Donner", "percentage"],
     ["Your Donation", donatedItems.length],
