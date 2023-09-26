@@ -30,7 +30,7 @@ const CardDonated = ({ item }) => {
           style={{ color: item.text_color }}
           className="text-[16px] font-semibold"
         >
-          ${item.price}
+          ${parseFloat(item.price).toFixed(2)}
         </p>
         <div className="justify-start card-actions">
           <Link to={`/campaign/${item.id}`}>
