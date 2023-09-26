@@ -1,4 +1,11 @@
-const Banner = () => {
+import { useState } from "react";
+import PropTypes from "prop-types";
+
+const Banner = ({ onSearchClicked }) => {
+  const [inputValue, setInputValue] = useState("");
+  const handleSearch = () => {
+    onSearchClicked(inputValue);
+  };
   return (
     <div className="max-w-[1600px] mx-auto font-inter">
       <div
@@ -17,8 +24,12 @@ const Banner = () => {
               <input
                 className="text-gray-700 input input-bordered join-item"
                 placeholder="Search here..."
+                onChange={(e) => setInputValue(e.target.value)}
               />
-              <button className="rounded-xl btn join-item bg-[#FF444A] hover:bg-red-300 text-[16px] font-semibold text-white normal-case">
+              <button
+                className="rounded-xl btn join-item bg-[#FF444A] hover:bg-red-300 text-[16px] font-semibold text-white normal-case"
+                onClick={handleSearch}
+              >
                 Search
               </button>
             </div>
@@ -26,8 +37,12 @@ const Banner = () => {
               <input
                 className="text-gray-700 input input-bordered w-[90%]"
                 placeholder="Search here..."
+                onChange={(e) => setInputValue(e.target.value)}
               />
-              <button className="rounded-lg btn bg-[#FF444A] hover:bg-red-300 text-[16px] font-semibold text-white normal-case">
+              <button
+                className="rounded-lg btn bg-[#FF444A] hover:bg-red-300 text-[16px] font-semibold text-white normal-case"
+                onClick={handleSearch}
+              >
                 Search
               </button>
             </div>
@@ -37,5 +52,7 @@ const Banner = () => {
     </div>
   );
 };
-
+Banner.propTypes = {
+  onSearchClicked: PropTypes.func.isRequired,
+};
 export default Banner;

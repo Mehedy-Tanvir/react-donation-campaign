@@ -15,6 +15,13 @@ const Statistics = () => {
   const options = {
     colors: customColors,
     legend: "none",
+    pieSliceTextStyle: {
+      color: "#FFF",
+      fontSize: 36,
+      fontName: "Inter",
+      bold: true,
+      italic: false,
+    },
   };
   return (
     <div className="max-w-[310px] md:max-w-[750px] lg:max-w-[900px] xl:max-w-[1320px] mx-auto mb-[40px] md:mb-[80px]">
