@@ -13,7 +13,7 @@ const CardHome = ({ item }) => {
 
   return (
     <Link to={`/campaign/${id}`}>
-      <div className="bg-transparent card h-[390px] rounded-t-lg">
+      <div className="bg-transparent rounded-t-lg card h-fit">
         <figure>
           <img
             src={image_card}
@@ -23,7 +23,7 @@ const CardHome = ({ item }) => {
         </figure>
         <div
           style={{ backgroundColor: card_bg_color }}
-          className="rounded-b-lg card-body"
+          className="p-4 h-[120px] rounded-b-lg"
         >
           <div
             style={{ backgroundColor: category_bg_color, color: text_color }}
