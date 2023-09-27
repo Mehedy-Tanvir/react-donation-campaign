@@ -16,7 +16,7 @@ const Statistics = () => {
     legend: "none",
     pieSliceTextStyle: {
       color: "#FFF",
-      fontSize: 36,
+      fontSize: 16,
       fontName: "Inter",
       bold: true,
       italic: false,
