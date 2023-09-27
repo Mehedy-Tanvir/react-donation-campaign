@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { AiOutlineMenu } from "react-icons/ai";
 
 const Navbar = () => {
   const links = (
@@ -50,35 +51,22 @@ const Navbar = () => {
   );
 
   return (
-    <div className="max-w-[310px] md:max-w-[750px] lg:max-w-[900px] xl:max-w-[1320px] mx-auto mt-[50px] z-50 flex justify-center items-center">
+    <div className="px-2 md:max-w-[750px] lg:max-w-[900px] xl:max-w-[1320px] mx-auto mt-[50px] z-50 flex justify-center items-center">
       <div className="container flex items-center justify-between">
-        <div className="dropdown lg:hidden">
+        <img className="w-[200px]" src="/Logo.png" alt="logo" />
+        <div className="hidden lg:block">
+          <ul className="flex text-[#0B0B0B] text-[18px] font-normal gap-[49px] items-center">
+            {links}
+          </ul>
+        </div>
+        <div className="dropdown dropdown-left lg:hidden">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-5 h-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h7"
-              />
-            </svg>
+            <AiOutlineMenu className="text-[36px]" />
           </label>
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-            {links}
-          </ul>
-        </div>
-        <img className="w-[200px]" src="/Logo.png" alt="logo" />
-        <div className="hidden lg:block">
-          <ul className="flex text-[#0B0B0B] text-[18px] font-normal gap-[49px] items-center">
             {links}
           </ul>
         </div>
