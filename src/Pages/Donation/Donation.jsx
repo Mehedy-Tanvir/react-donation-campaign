@@ -4,10 +4,17 @@ import CardDonated from "../../Components/Donation/CardDonated/CardDonated";
 import { useState } from "react";
 
 const Donation = () => {
-  const donations = getFromLs();
+  const donations = getFromLs() || [];
   const items = useLoaderData();
 
-  const donatedItems = items.filter((item) => donations?.includes(item.id));
+  // const donatedItems = items.filter((item) => donations.includes(item.id));
+  let donatedItems = [];
+  for (let donation of donations) {
+    let foundItem = items.find((item) => item.id === donation);
+    if (foundItem) {
+      donatedItems.push(foundItem);
+    }
+  }
 
   const [seeAll, setSeeAll] = useState(false);
   const handleSeeAll = () => {

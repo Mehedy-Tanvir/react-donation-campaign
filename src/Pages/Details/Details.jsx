@@ -7,7 +7,7 @@ const Details = () => {
   const items = useLoaderData();
   let detailItem = items.find((item) => item.id == params.id);
   const handleDonate = () => {
-    Swal.fire("Good job!", "Your donation was successful!", "success");
+    Swal.fire("Thank You!", "Your donation was successful!", "success");
     addToLs(detailItem.id);
   };
 
