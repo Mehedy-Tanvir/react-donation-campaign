@@ -17,7 +17,7 @@ const Banner = ({ onSearchClicked }) => {
         <div className="bg-white hero-overlay bg-opacity-[95%]"></div>
         <div className="text-center hero-content text-neutral-content">
           <div className="max-w-[780px]">
-            <h1 className="mb-5 md:text-[32px] text-[20px] lg:text-[48px]  font-bold text-[#0B0B0B]">
+            <h1 className="mb-5 text-[32px] lg:text-[48px]  font-bold text-[#0B0B0B]">
               I Grow By Helping People In Need
             </h1>
             <div className="hidden join md:block">
