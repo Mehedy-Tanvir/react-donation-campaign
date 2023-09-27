@@ -5,10 +5,14 @@ import { useLoaderData } from "react-router-dom";
 const Statistics = () => {
   const items = useLoaderData() || [];
   const donatedItems = getFromLs() || [];
+  let totalDonation = items.length - donatedItems.length;
+  if (totalDonation < 0) {
+    totalDonation = 0;
+  }
   const data = [
     ["Donner", "percentage"],
     ["Your Donation", donatedItems.length],
-    ["Total Donation", items.length - donatedItems.length],
+    ["Total Donation", totalDonation],
   ];
   const customColors = ["#00C49F", "#FF444A"];
   const options = {
